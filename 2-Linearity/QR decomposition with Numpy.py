@@ -1,0 +1,1 @@
+""" QR decomposition with scipy """from scipy import linalgimport numpy as npA = np.array([    [2., 1., 1.],    [1., 3., 2.],    [1., 0., 0]])B = np.array([4., 5., 6.])Q, R = linalg.qr(A)  # QR decompositiony = np.dot(Q.T, B)  # Let y=Q`.Bx = linalg.solve(R, y)  # Solve Rx=yprint (x)
